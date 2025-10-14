@@ -117,10 +117,14 @@
         </div>
     </div>
 
-    <!-- Info Jumlah Data -->
-    <div class="mt-3 text-muted">
-        Menampilkan {{ count($jabatans) }} jabatan
+    <div class="d-flex justify-content-between align-items-center mt-3">
+    <div class="text-muted">
+        Menampilkan {{ $jabatans->count() }} dari total {{ $jabatans->total() }} jabatan
     </div>
+    <div>
+        {{ $jabatans->links('pagination::bootstrap-5') }}
+    </div>
+</div>
 </div>
 
 @endsection

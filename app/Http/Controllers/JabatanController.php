@@ -17,7 +17,7 @@ class JabatanController extends Controller
                 ->orWhere('tunjangan', 'like', "%{$search}%");
         })
             ->orderBy('id_jabatan', 'asc')
-            ->get();
+            ->paginate(10);
 
         return view('jabatan.index', compact('jabatans', 'search'));
     }
