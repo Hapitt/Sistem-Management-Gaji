@@ -184,11 +184,20 @@
                         @endforeach
                     </tbody>
                 </table>
-            </div>
         </div>
+
+        <div class="d-flex justify-content-between align-items-center mt-3">
+    <div class="text-muted">
+        Menampilkan {{ $karyawans->count() }} dari total {{ $karyawans->total() }} Karyawan
     </div>
-
-
+    <div>
+        {{ $karyawans->links('pagination::bootstrap-5') }}
+    </div>
+    </div>
 </div>
+
+
+
+
 
 @endsection

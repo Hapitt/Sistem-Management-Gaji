@@ -31,7 +31,7 @@ class GajiController extends Controller
             })
 
             ->orderBy('id_gaji', 'asc')
-            ->get();
+            ->paginate(5);
 
         return view('gaji.index', compact('gaji', 'search', 'periode'));
     }

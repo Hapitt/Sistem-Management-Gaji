@@ -94,7 +94,7 @@
                     <tbody>
                         @forelse ($gaji as $index => $row)
                             <tr class="align-middle">
-                                <td class="ps-4 fw-medium">{{ $index + 1 }}</td>
+                                <td class="ps-4 fw-medium">{{ $gaji->firstItem() + $index }}</td>
                                 <td><span class="fw-semibold">{{ $row->karyawan->nama ?? '-' }}</span></td>
                                 <td><span class="badge bg-primary">Rp {{ number_format($row->lembur->tarif ?? 0, 0, ',', '.') }}</span></td>
                                 <td><span class="badge bg-info text-dark">{{ $row->periode }}</span></td>
@@ -130,9 +130,12 @@
         </div>
     </div>
 
-    <!-- Info Jumlah Data -->
-    <div class="mt-3 text-muted">
-        Menampilkan {{ count($gaji) }} data gaji
+   <div class="d-flex justify-content-between align-items-center mt-3">
+    <div class="text-muted">
+        Menampilkan {{ $gaji->count() }} dari total {{ $gaji->total() }} Gaji Karyawan
+    </div>
+    <div>
+        {{ $gaji->links('pagination::bootstrap-5') }}
     </div>
 </div>
 @endsection

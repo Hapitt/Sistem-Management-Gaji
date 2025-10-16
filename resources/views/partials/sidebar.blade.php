@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const collapseElement = document.getElementById('collapseLayouts');
     const toggleButton = document.getElementById('manajemenToggle');
     
-    // Cek localStorage saat halaman load
+
     const isOpen = localStorage.getItem('manajemenDataOpen') === 'true';
     
     if (isOpen) {
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleButton.setAttribute('aria-expanded', 'true');
     }
     
-    // Simpan state ke localStorage saat di-toggle
+
     collapseElement.addEventListener('show.bs.collapse', function() {
         localStorage.setItem('manajemenDataOpen', 'true');
     });
