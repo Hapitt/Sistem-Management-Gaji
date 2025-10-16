@@ -23,7 +23,7 @@
 
     <div class="guest-container">
         <img src="{{ asset('images/Logo.png') }}" alt="Logo Sistem">
-        <h2>Anda Belum Login</h2>
+        <h2>Anda Belum Login!!</h2>
         <p>Silakan login terlebih dahulu untuk mengakses Sistem Manajemen Gaji.</p>
         <a href="{{ route('login') }}">
             <i class="fas fa-sign-in-alt me-2"></i> Masuk Sekarang
