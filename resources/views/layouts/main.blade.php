@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Sistem Manajemen Gaji" />
     <meta name="author" content="Hafidz" />
-    <title>@yield('title', 'Dashboard - Sistem Manajemen Gaji')</title>
+    <title>@yield('title', 'Sistem Manajemen Gaji')</title>
 
     {{-- CSS --}}
     @vite(['resources/css/style.css'])
