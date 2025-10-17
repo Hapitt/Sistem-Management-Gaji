@@ -1,0 +1,355 @@
+/* ===================================
+   SIDENAV STYLES (dari resources/css/style.css)
+   =================================== */
+.sb-sidenav-primary {
+    background-color: #0d6efd !important;
+}
+
+.sb-sidenav-primary .sb-sidenav-menu {
+    background-color: #0d6efd !important;
+}
+
+.sb-sidenav-primary .sb-sidenav-menu .nav-link {
+    color: #ffffff !important;
+}
+
+.sb-sidenav-primary .sb-sidenav-menu .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+}
+
+.sb-sidenav-primary .sb-sidenav-menu .nav-link .sb-nav-link-icon {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.sb-sidenav-primary .sb-sidenav-menu-heading {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.sb-sidenav-primary .sb-sidenav-menu .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+}
+
+/* ===================================
+   CARD & TABLE STYLES (dari resources/css/style.css)
+   =================================== */
+.card {
+    border-radius: 10px;
+}
+
+.table th {
+    border-top: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #6c757d;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.table td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-warning:hover,
+.btn-outline-danger:hover {
+    transform: translateY(-1px);
+}
+
+.badge.bg-warning {
+    font-size: 0.9rem !important;
+}
+
+.badge.bg-success {
+    font-size: 0.9rem !important;
+}
+
+.text-primary {
+    color: #0d6efd !important;
+}
+
+.fw-semibold {
+    font-weight: 600;
+}
+
+.text-success {
+    color: #198754 !important;
+}
+
+.text-info {
+    color: #0dcaf0 !important;
+}
+
+.fs-6 {
+    font-size: 1rem !important;
+}
+
+/* ===================================
+   AUTH PAGES STYLES (dari login.blade.php & register.blade.php)
+   =================================== */
+:root {
+    --primary-color: #5ab2f0;
+    --secondary-color: #3f8efc;
+    --accent-color: #2c6ef2;
+    --light-color: #f0f8ff;
+    --dark-color: #1c1c1c;
+    --gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+}
+
+body.auth-page {
+    background: var(--gradient);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.login-container {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    z-index: 1;
+}
+
+.login-header {
+    background: var(--gradient);
+    color: white;
+    padding: 40px 30px 30px;
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo i {
+    font-size: 36px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.login-body {
+    padding: 40px 30px 30px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 2px solid #d0d0d0;
+    border-radius: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    background: transparent;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    border-bottom-color: var(--primary-color);
+    box-shadow: none;
+}
+
+.form-label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.form-control:focus+.form-label,
+.form-control:not(:placeholder-shown)+.form-label {
+    top: -15px;
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.btn-login {
+    background: var(--gradient);
+    border: none;
+    border-radius: 50px;
+    padding: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    width: 100%;
+    margin-top: 10px;
+    color: white;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(90, 178, 240, 0.4);
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.forgot-password {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.register-link a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.floating-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.floating-element {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: float 15s infinite linear;
+}
+
+.floating-element:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    top: 10%;
+    left: 10%;
+    animation-duration: 20s;
+}
+
+.floating-element:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    top: 60%;
+    left: 80%;
+    animation-duration: 25s;
+}
+
+.floating-element:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    top: 80%;
+    left: 20%;
+    animation-duration: 15s;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(10px, 15px) rotate(5deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+.password-toggle {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+}
+
+@media (max-width: 576px) {
+    .login-body {
+        padding: 30px 20px;
+    }
+}
+
+/* ===================================
+   KARYAWAN INDEX PAGE STYLES
+   =================================== */
+.animate__animated {
+    animation-duration: 0.6s;
+}
+
+.animate__fadeIn {
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.bg-gradient {
+    background-image: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.rounded-pill {
+    border-radius: 50rem !important;
+}
+
+.gap-2 {
+    gap: 0.5rem !important;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0 !important;
+}

@@ -1,22 +1,23 @@
 @extends('layouts.main')
 
 @section('content')
-@vite(['resources/css/style.css'])
 
 <div class="container-fluid py-4">
     <!-- Header -->
     <div class="container-fluid py-4 animate__animated animate__fadeIn">
-    <!-- Header Section -->
+        <!-- Alert Pencarian -->
         @if(request('search'))
-            <div class="alert alert-info shadow-sm mt-3 mb-0">
+            <div class="alert alert-info shadow-sm mb-3">
                 <i class="fas fa-search me-2"></i> 
                 Menampilkan hasil pencarian untuk: 
                 <strong>{{ request('search') }}</strong>
             </div>
         @endif
+
+        <!-- Header Section -->
         <div class="card border-0 shadow-sm mb-4 bg-light bg-gradient">
             <div class="card-body p-4">
-                <!-- Header Section dengan lebih banyak spacing -->
+                
                 <div class="row align-items-center mb-4">
                     <div class="col-lg-6 mb-3 mb-lg-0">
                         <h1 class="h3 fw-bold text-dark mb-2">
@@ -98,8 +99,6 @@
             </div>
         </div>
     </div>
-    
-
 
     <!-- Alert -->
     @if(session('success'))
@@ -184,20 +183,18 @@
                         @endforeach
                     </tbody>
                 </table>
-        </div>
+            </div>
 
-        <div class="d-flex justify-content-between align-items-center mt-3">
-    <div class="text-muted">
-        Menampilkan {{ $karyawans->count() }} dari total {{ $karyawans->total() }} Karyawan
-    </div>
-    <div>
-        {{ $karyawans->links('pagination::bootstrap-5') }}
-    </div>
+            <div class="d-flex justify-content-between align-items-center mt-3 px-4 pb-3">
+                <div class="text-muted">
+                    Menampilkan {{ $karyawans->count() }} dari total {{ $karyawans->total() }} Karyawan
+                </div>
+                <div>
+                    {{ $karyawans->links('pagination::bootstrap-5') }}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
-
-
-
 
 @endsection
