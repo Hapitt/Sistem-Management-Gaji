@@ -17,7 +17,7 @@
         <!-- Header Section -->
         <div class="card border-0 shadow-sm mb-4 bg-light bg-gradient">
             <div class="card-body p-4">
-                
+                <!-- Header Section dengan lebih banyak spacing -->
                 <div class="row align-items-center mb-4">
                     <div class="col-lg-6 mb-3 mb-lg-0">
                         <h1 class="h3 fw-bold text-dark mb-2">
